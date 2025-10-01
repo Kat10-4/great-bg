@@ -15,9 +15,15 @@
         theme: {
           extend: {
             colors: {
-              primary: "#0000000",
+              primary: "#000000",
+              secondary: "#FFFEF4",
               accent: "#7B0AD1",
+              accent_secondary: "#5F6D7E",
               borders: "#D5D5D5",
+              rating: "#FFBD59",
+              review: " #EFE1F0",
+              text: "#5F6D7E",
+              size_box: "#F3F3F3",
             },
             fontFamily: {
               inter: ["Inter", "system-ui", "sans-serif"],
@@ -55,9 +61,9 @@
       }
     </style>
   </head>
-  <body class="font-inter bg-white text-inter-400">
+  <body class="font-inter bg-secondary text-inter-400">
     <!-- Header -->
-    <header class="max-w-screen-1440 mx-auto sticky top-0 z-50 bg-white">
+    <header class="max-w-screen-1440 mx-auto bg-secondary sticky top-0 z-50">
       <div class="container mx-auto px-4 py-4">
         <div class="flex justify-between items-center gap-x-[50px]">
           <!-- Logo -->
@@ -138,7 +144,7 @@
               type="text"
               id="searchInput"
               placeholder="Търси тук..."
-              class="w-full pl-10 pr-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-400"
+              class="w-full pl-10 pr-4 py-3 bg-secondary rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-400"
             />
           </div>
           <!--User Icons-->
@@ -180,331 +186,565 @@
     <!-- Product Section -->
     <section
       id="product"
-      class="max-w-screen-1440 flex-col mx-auto md:my-[100px] sm:my-[70px] md:flex-row"
+      class="max-w-screen-1440 flex flex-col items-stretch gap-[85px] mx-auto md:my-[100px] sm:my-[70px] custom-1300:flex-row custom-1300:items-stretch"
     >
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-center gap-[85px]">
-          <!--Product photos-->
-          <!-- Grid Container -->
-          <div class="grid grid-cols-1 gap-6 max-w-[640px] mx-auto">
-            <div>
+      <!--Product photos-->
+      <div class="flex-1 max-w-[640px] mx-auto self-stretch">
+        <!-- Grid Container -->
+        <div
+          class="grid grid-cols-1 grid-rows-[minmax(0,1fr)_auto] gap-6 max-w-[640px] h-full"
+        >
+          <div class="min-h-0">
+            <img
+              src="./assets/product-big.png"
+              alt="product1"
+              class="rounded-[10px] w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex flex-row gap-4 h-[150px]">
+            <div
+              class="rounded-[5px] border-borders border-[5px] border-solid hover:border-accent transition-all duration-300"
+            >
               <img
-                src="./assets/product-big.png"
-                alt="product1"
-                class="rounded-[10px] w-full h-auto object-cover"
+                src="./assets/prod-small-1.jpg"
+                alt="product2"
+                class="w-full h-full object-cover rounded-[2px]"
               />
             </div>
-            <div class="flex flex-row gap-4">
+            <div
+              class="rounded-[5px] border-borders border-[5px] border-solid hover:border-accent transition-all duration-300"
+            >
+              <img
+                src="./assets/prod-small-2.jpg"
+                alt="product3"
+                class="w-full h-full object-cover rounded-[2px]"
+              />
+            </div>
+            <div
+              class="rounded-[5px] border-borders border-[5px] border-solid hover:border-accent transition-all duration-300"
+            >
+              <img
+                src="./assets/prod-small-1.jpg"
+                alt="product4"
+                class="w-full h-full object-cover rounded-[2px]"
+              />
+            </div>
+            <div
+              class="rounded-[5px] border-borders border-[5px] border-solid hover:border-accent transition-all duration-300"
+            >
+              <img
+                src="./assets/prod-small-3.jpg"
+                alt="product5"
+                class="w-full h-full object-cover rounded-[2px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Product Info-->
+      <div class="flex-1 md:w-1/2 max-w-[640px] mx-auto">
+        <!--General Info-->
+        <article class="">
+          <div class="flex justify-between items-center">
+            <h2 class="heading-nexa text-[40px]">Обеци Гъбки</h2>
+            <!--Ratings-->
+            <div class="flex items-center gap-[12px]">
               <div
-                class="rounded-[5px] border-borders border-[5px] border-solid hover:border-accent transition-all duration-300"
+                class="flex items-center gap-[7px] bg-[rgb(255_189_89/0.24)] text-rating px-[10px] py-[7px] rounded-[8px]"
               >
                 <img
-                  src="./assets/prod-small-1.jpg"
-                  alt="product2"
-                  class="w-full h-auto object-cover rounded-[2px]"
+                  src="./assets/star.png"
+                  alt="rating star"
+                  class="h-[16px ] w-[16px]"
                 />
+                <span class="font-inter-700 font-semibold text-sm">4.8</span>
               </div>
               <div
-                class="rounded-[5px] border-borders border-[5px] border-solid hover:border-accent transition-all duration-300"
+                class="flex items-center gap-[7px] bg-review text-accent px-[10px] py-[7px] rounded-[8px]"
               >
                 <img
-                  src="./assets/prod-small-2.jpg"
-                  alt="product3"
-                  class="w-full h-auto object-cover rounded-[2px]"
+                  src="./assets/review.png"
+                  alt="rating star"
+                  class="h-[16px ] w-[16px]"
                 />
-              </div>
-              <div
-                class="rounded-[5px] border-borders border-[5px] border-solid hover:border-accent transition-all duration-300"
-              >
-                <img
-                  src="./assets/prod-small-1.jpg"
-                  alt="product4"
-                  class="w-full h-auto object-cover rounded-[2px]"
-                />
-              </div>
-              <div
-                class="rounded-[5px] border-borders border-[5px] border-solid hover:border-accent transition-all duration-300"
-              >
-                <img
-                  src="./assets/prod-small-3.jpg"
-                  alt="product5"
-                  class="w-full h-auto object-cover rounded-[2px]"
-                />
+                <span class="font-inter-700 font-semibold text-sm"
+                  >67 Отзива</span
+                >
               </div>
             </div>
           </div>
-          <!--Product Info-->
-          <div class="md:w-1/2 mb-10 md:mb-0 max-w-[640px]">
-            <!--General Info-->
+          <div
+            class="space-y-[30px] mt-[20px] mb-[30px] text-inter-400 text-lg"
+          >
+            <p class="text-accent_secondary">
+              Кат. номер:
+              <span class="font-semibold text-primary">8418</span>
+            </p>
+            <p class="text-accent_secondary">
+              Производител:
+              <span class="font-semibold text-primary">Epoque Candle</span>
+            </p>
+            <p class="text-primary leading-[30px]">
+              Висящи ефектни обеци гъбки, боядисани с черна матова боя, закачени
+              за кръгчета от моделин. Красив и артистичен акцент във визията на
+              дамите.
+            </p>
+            <p class="text-primary">
+              <span class="font-semibold">Материал:</span> месинг, матова черна
+              боя, стоманени щифтове
+            </p>
+            <p class="text-primary">
+              <span class="font-semibold">Размер:</span> дължина - 7.5 см
+            </p>
+          </div>
+        </article>
 
-            <article class="mb-8">
-              <h2 class="text-3xl font-bold text-gray-900 mb-4">Обеци Гъбки</h2>
-
-              <!--Ratings-->
-              <div class="flex items-center gap-4 mb-4">
+        <form action="" class="space-y-[30px]">
+          <hr class="border-gray-300" />
+          <!--Color Info-->
+          <fieldset>
+            <legend class="heading-nexa text-[25px] mb-[20px]">
+              Изберете цвят
+            </legend>
+            <div class="flex gap-[8px]">
+              <label class="cursor-pointer relative">
+                <input
+                  type="radio"
+                  name="color"
+                  value="beige"
+                  class="sr-only peer"
+                  checked
+                />
                 <div
-                  class="flex items-center gap-2 bg-green-100 text-green-800 px-3 py-1 rounded-full"
+                  class="w-[46px] h-[46px] p-[2px] peer-checked:border-2 peer-checked:border-accent peer-checked:rounded-full transition-all duration-400"
                 >
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
-                  </svg>
-                  <span class="font-semibold">4.8</span>
+                  <div class="w-full h-full rounded-full bg-[#ECDECC]"></div>
                 </div>
-                <div class="text-gray-600">67 Отзива</div>
-              </div>
-
-              <div class="space-y-2 mb-6">
-                <p class="text-gray-700">
-                  <span class="font-semibold">Кат. номер:</span> 8418
-                </p>
-                <p class="text-gray-700">
-                  <span class="font-semibold">Производител:</span> Epoque Candle
-                </p>
-              </div>
-
-              <div class="space-y-4 text-gray-700">
-                <p>
-                  Висящи ефектни обеци гъбки, боядисани с черна матова боя,
-                  закачени за кръгчета от моделин. Красив и артистичен акцент
-                  във визията на дамите.
-                </p>
-                <p>
-                  <span class="font-semibold">Материал:</span> месинг, матова
-                  черна боя, стоманени щифтове
-                </p>
-                <p>
-                  <span class="font-semibold">Размер:</span> дължина - 7.5 см
-                </p>
-              </div>
-            </article>
-
-            <form action="" class="space-y-6">
-              <hr class="border-gray-300" />
-
-              <!--Color Info-->
-              <fieldset>
-                <legend class="text-lg font-semibold text-gray-900 mb-3">
-                  Изберете цвят
-                </legend>
-                <div class="flex gap-3">
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="color"
-                      value="beige"
-                      class="sr-only peer"
-                      checked
-                    />
-                    <div
-                      class="w-10 h-10 bg-amber-200 rounded-full border-2 border-transparent peer-checked:border-gray-900 peer-checked:ring-2 peer-checked:ring-amber-300"
-                    ></div>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="color"
-                      value="green"
-                      class="sr-only peer"
-                    />
-                    <div
-                      class="w-10 h-10 bg-green-500 rounded-full border-2 border-transparent peer-checked:border-gray-900 peer-checked:ring-2 peer-checked:ring-green-300"
-                    ></div>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="color"
-                      value="blue"
-                      class="sr-only peer"
-                    />
-                    <div
-                      class="w-10 h-10 bg-blue-500 rounded-full border-2 border-transparent peer-checked:border-gray-900 peer-checked:ring-2 peer-checked:ring-blue-300"
-                    ></div>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="color"
-                      value="pink"
-                      class="sr-only peer"
-                    />
-                    <div
-                      class="w-10 h-10 bg-pink-400 rounded-full border-2 border-transparent peer-checked:border-gray-900 peer-checked:ring-2 peer-checked:ring-pink-300"
-                    ></div>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="color"
-                      value="multi"
-                      class="sr-only peer"
-                    />
-                    <div
-                      class="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full border-2 border-transparent peer-checked:border-gray-900 peer-checked:ring-2 peer-checked:ring-purple-300"
-                    ></div>
-                  </label>
+                <img
+                  src="./assets/stroke.png"
+                  alt="checked"
+                  class="absolute top-[40%] left-[35%] opacity-0 peer-checked:opacity-100 transition-all duration-400"
+                />
+              </label>
+              <label class="cursor-pointer relative">
+                <input
+                  type="radio"
+                  name="color"
+                  value="green"
+                  class="sr-only peer"
+                />
+                <div
+                  class="w-[46px] h-[46px] p-[2px] peer-checked:border-2 peer-checked:border-accent peer-checked:rounded-full transition-all duration-400"
+                >
+                  <div class="w-full h-full rounded-full bg-[#BBD278]"></div>
                 </div>
-              </fieldset>
-
-              <hr class="border-gray-300" />
-
-              <!--Size Info-->
-              <fieldset>
-                <legend class="text-lg font-semibold text-gray-900 mb-3">
-                  Изберете размер
-                </legend>
-                <div class="flex flex-wrap gap-2">
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="size"
-                      value="S"
-                      class="sr-only peer"
-                    />
-                    <div
-                      class="px-4 py-2 border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 font-medium"
-                    >
-                      S
-                    </div>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="size"
-                      value="M"
-                      class="sr-only peer"
-                      checked
-                    />
-                    <div
-                      class="px-4 py-2 border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 font-medium"
-                    >
-                      M
-                    </div>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="size"
-                      value="L"
-                      class="sr-only peer"
-                    />
-                    <div
-                      class="px-4 py-2 border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 font-medium"
-                    >
-                      L
-                    </div>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="size"
-                      value="XL"
-                      class="sr-only peer"
-                    />
-                    <div
-                      class="px-4 py-2 border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 font-medium"
-                    >
-                      XL
-                    </div>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="size"
-                      value="XXL"
-                      class="sr-only peer"
-                    />
-                    <div
-                      class="px-4 py-2 border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 font-medium"
-                    >
-                      XXL
-                    </div>
-                  </label>
+                <img
+                  src="./assets/stroke.png"
+                  alt="checked"
+                  class="absolute top-[40%] left-[35%] opacity-0 peer-checked:opacity-100 transition-all duration-400"
+                />
+              </label>
+              <label class="cursor-pointer relative">
+                <input
+                  type="radio"
+                  name="color"
+                  value="violet"
+                  class="sr-only peer"
+                />
+                <div
+                  class="w-[46px] h-[46px] p-[2px] peer-checked:border-2 peer-checked:border-accent peer-checked:rounded-full transition-all duration-400"
+                >
+                  <div class="w-full h-full rounded-full bg-[#BBC1F8]"></div>
                 </div>
-              </fieldset>
-
-              <!--Order Info-->
-              <div
-                class="flex items-center justify-between bg-gray-50 p-4 rounded-lg"
-              >
-                <div class="text-2xl font-bold text-gray-900">30.00лв</div>
-                <div class="flex items-center gap-3">
-                  <button
-                    type="button"
-                    class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300 transition-colors"
-                  >
-                    <span class="text-lg">-</span>
-                  </button>
-                  <span class="text-lg font-semibold w-8 text-center">2</span>
-                  <button
-                    type="button"
-                    class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300 transition-colors"
-                  >
-                    <span class="text-lg">+</span>
-                  </button>
+                <img
+                  src="./assets/stroke.png"
+                  alt="checked"
+                  class="absolute top-[40%] left-[35%] opacity-0 peer-checked:opacity-100 transition-all duration-400"
+                />
+              </label>
+              <label class="cursor-pointer relative">
+                <input
+                  type="radio"
+                  name="color"
+                  value="pink"
+                  class="sr-only peer"
+                />
+                <div
+                  class="w-[46px] h-[46px] p-[2px] peer-checked:border-2 peer-checked:border-accent peer-checked:rounded-full transition-all duration-400"
+                >
+                  <div class="w-full h-full rounded-full bg-[#FFD3F8]"></div>
                 </div>
+                <img
+                  src="./assets/stroke.png"
+                  alt="checked"
+                  class="absolute top-[40%] left-[35%] opacity-0 peer-checked:opacity-100 transition-all duration-400"
+                />
+              </label>
+              <label class="cursor-pointer relative">
+                <input
+                  type="radio"
+                  name="color"
+                  value="multi"
+                  class="sr-only peer"
+                />
+                <div
+                  class="w-[46px] h-[46px] p-[2px] peer-checked:border-2 peer-checked:border-accent peer-checked:rounded-full transition-all duration-400"
+                >
+                  <div
+                    class="w-full h-full rounded-full bg-[linear-gradient(180deg,rgba(255,182,182,1)_50%,rgba(152,193,133,1)_50%)]"
+                  ></div>
+                </div>
+                <img
+                  src="./assets/stroke.png"
+                  alt="checked"
+                  class="absolute top-[40%] left-[35%] opacity-0 peer-checked:opacity-100 transition-all duration-400"
+                />
+              </label>
+            </div>
+          </fieldset>
+          <hr class="border-gray-300" />
+          <!--Size Info-->
+          <fieldset>
+            <legend class="heading-nexa text-[25px] mb-[20px]">
+              Изберете размер
+            </legend>
+            <div
+              class="flex flex-wrap gap-[11px] text-[14px] font-inter-500 text-[#726C6C]"
+            >
+              <div class="cursor-pointer relative inline-block">
+                <input
+                  type="radio"
+                  name="size"
+                  value="S"
+                  id="S"
+                  class="sr-only peer"
+                  checked
+                />
+                <div
+                  class="w-4 h-4 rounded-full border border-[#726C6C] peer-checked:border-accent transition-all duration-400 absolute top-[10px] left-[10px] pointer-events-none"
+                ></div>
+                <div
+                  class="absolute w-2.5 h-2.5 rounded-full bg-accent opacity-0 peer-checked:opacity-100 transition-all duration-400 top-[13px] left-[13px] pointer-events-none"
+                ></div>
+                <label
+                  for="S"
+                  class="cursor-pointer flex items-center gap-[8px] bg-size_box px-[10px] py-[7px] rounded-[8px] pl-8 peer-checked:bg-review peer-checked:text-accent transition-all duration-400"
+                >
+                  S
+                </label>
               </div>
-
+              <div class="cursor-pointer relative inline-block">
+                <input
+                  type="radio"
+                  name="size"
+                  value="M"
+                  id="M"
+                  class="sr-only peer"
+                />
+                <div
+                  class="w-4 h-4 rounded-full border border-[#726C6C] peer-checked:border-accent transition-all duration-400 absolute top-[10px] left-[10px] pointer-events-none"
+                ></div>
+                <div
+                  class="absolute w-2.5 h-2.5 rounded-full bg-accent opacity-0 peer-checked:opacity-100 transition-all duration-400 top-[13px] left-[13px] pointer-events-none"
+                ></div>
+                <label
+                  for="M"
+                  class="cursor-pointer flex items-center gap-[8px] bg-size_box px-[10px] py-[7px] rounded-[8px] pl-8 peer-checked:bg-review peer-checked:text-accent transition-all duration-400"
+                >
+                  M
+                </label>
+              </div>
+              <div class="cursor-pointer relative inline-block">
+                <input
+                  type="radio"
+                  name="size"
+                  value="L"
+                  id="L"
+                  class="sr-only peer"
+                />
+                <div
+                  class="w-4 h-4 rounded-full border border-[#726C6C] peer-checked:border-accent transition-all duration-400 absolute top-[10px] left-[10px] pointer-events-none"
+                ></div>
+                <div
+                  class="absolute w-2.5 h-2.5 rounded-full bg-accent opacity-0 peer-checked:opacity-100 transition-all duration-400 top-[13px] left-[13px] pointer-events-none"
+                ></div>
+                <label
+                  for="L"
+                  class="flex items-center gap-[8px] bg-size_box px-[10px] py-[7px] rounded-[8px] pl-8 peer-checked:bg-review peer-checked:text-accent transition-all duration-400"
+                >
+                  L
+                </label>
+              </div>
+              <div class="cursor-pointer relative inline-block">
+                <input
+                  type="radio"
+                  name="size"
+                  value="XL"
+                  id="XL"
+                  class="sr-only peer"
+                />
+                <div
+                  class="w-4 h-4 rounded-full border border-[#726C6C] peer-checked:border-accent transition-all duration-400 absolute top-[10px] left-[10px] pointer-events-none"
+                ></div>
+                <div
+                  class="absolute w-2.5 h-2.5 rounded-full bg-accent opacity-0 peer-checked:opacity-100 transition-all duration-400 top-[13px] left-[13px] pointer-events-none"
+                ></div>
+                <label
+                  for="XL"
+                  class="cursor-pointer flex items-center gap-[8px] bg-size_box px-[10px] py-[7px] rounded-[8px] pl-8 peer-checked:bg-review peer-checked:text-accent transition-all duration-400"
+                >
+                  XL
+                </label>
+              </div>
+              <div class="cursor-pointer relative inline-block">
+                <input
+                  type="radio"
+                  name="size"
+                  value="XXL"
+                  id="XXL"
+                  class="sr-only peer"
+                />
+                <div
+                  class="w-4 h-4 rounded-full border border-[#726C6C] peer-checked:border-accent transition-all duration-400 absolute top-[10px] left-[10px] pointer-events-none"
+                ></div>
+                <div
+                  class="absolute w-2.5 h-2.5 rounded-full bg-accent opacity-0 peer-checked:opacity-100 transition-all duration-400 top-[13px] left-[13px] pointer-events-none"
+                ></div>
+                <label
+                  for="XXL"
+                  class="cursor-pointer flex items-center gap-[8px] bg-size_box px-[10px] py-[7px] rounded-[8px] pl-8 peer-checked:bg-review peer-checked:text-accent transition-all duration-400"
+                >
+                  XXL
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <!--Order Info-->
+          <div class="flex items-center mt-[73px] mb-[52px] gap-x-[25px]">
+            <div class="text-[45px] font-inter-700 font-bold text-primary">
+              30.00лв
+            </div>
+            <div class="flex content-end gap-4">
               <button
-                type="submit"
-                class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+                type="button"
+                class="w-[35px] h-[35px] rounded-[6px] border-accent border-2 hover:bg-accent transition-colors duration-400 relative"
               >
-                Поръчай сега
+                <span
+                  class="text-accent text-[40px] hover:text-primary absolute bottom-[-13px] right-[6px]"
+                  >-</span
+                >
               </button>
-            </form>
+              <span class="text-[24px] font-inter-500 wx-[20px]">2</span>
+              <button
+                type="button"
+                class="w-[35px] h-[35px] rounded-[6px] border-accent border-2 hover:bg-accent transition-colors duration-400 relative"
+              >
+                <span
+                  class="text-accent text-[40px] hover:text-primary absolute bottom-[-12px] left-[2px]"
+                  >+</span
+                >
+              </button>
+            </div>
+          </div>
 
-            <!--Delivery info-->
-            <div class="mt-8 space-y-4">
-              <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
-                <div class="w-6 h-6 text-green-600 mt-1">
-                  <svg fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <p class="font-semibold text-gray-900">
-                    Безплатна доставка над 50лв
-                  </p>
-                  <a
-                    href="#delivery"
-                    class="text-blue-600 hover:text-blue-800 text-sm"
-                    >Подробности за доставка</a
-                  >
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
-                <div class="w-6 h-6 text-green-600 mt-1">
-                  <svg fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <p class="font-semibold text-gray-900">Връщане на доставка</p>
-                  <p class="text-sm text-gray-600">
-                    Безплатна 30-дневна доставка Връщане.
-                    <a
-                      href="#delivery"
-                      class="text-blue-600 hover:text-blue-800"
-                      >Подробности</a
-                    >
-                  </p>
-                </div>
-              </div>
+          <button
+            type="submit"
+            class="bg-accent font-inter-600 text-[#F8F9FB] text-22px py-[8px] px-[18px] rounded-[8px] font-semibold hover:bg-review hover:text-gray-600 transition-colors duration-400"
+          >
+            Поръчай сега
+          </button>
+        </form>
+        <!--Delivery info-->
+        <div
+          class="mt-8 space-y-4 p-[17px] border-2 border-grey rounded-[14px]"
+        >
+          <div class="flex items-start gap-3">
+            <img
+              src="./assets/car.png"
+              alt="car"
+              class="w-6 h-6 text-green-600 mt-1"
+            />
+            <div>
+              <p class="font-bold text-primary font-inter-700 text-[17px]">
+                Безплатна доставка над 50лв
+              </p>
+              <a
+                href="#delivery"
+                class="text-accent underline hover:text-accent_secondary text-[14px]"
+                >Подробности за доставка</a
+              >
+            </div>
+          </div>
+          <hr class="c" />
+          <div class="flex items-start gap-3">
+            <img
+              src="./assets/bag.png"
+              alt="bag"
+              class="w-6 h-6 text-green-600 mt-1"
+            />
+            <div>
+              <p class="font-bold text-primary font-inter-700 text-[17px]">
+                Връщане на доставка
+              </p>
+              <p class="text-accent_secondary font-inter-400 text-[14px]">
+                Безплатна 30-дневна доставка Връщане.
+                <a
+                  href="#delivery"
+                  class="text-accent underline hover:text-accent_secondary text-[14px]"
+                  >Подробности</a
+                >
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Similar Products Section -->
+    <section class="max-w-screen-1440 mx-auto my-[100px] px-4">
+      <div class="flex justify-between items-center mb-[45px]">
+        <h2 class="heading-nexa text-[35px] text-primary">Подобни продукти</h2>
+        <!-- Carousel Navigation -->
+        <div class="flex gap-4">
+          <button
+            class="carousel-prev bg-accent hover:bg-review text-white w-[45px] h-[45px] shadow-[0px_4.8px_4.8px_0px_rgba(12,4,102,0.2)] rounded-full flex items-center justify-center transition-colors duration-300"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            class="carousel-next bg-accent hover:bg-review text-white w-[45px] h-[45px] shadow-[0px_4.8px_4.8px_0px_rgba(12,4,102,0.2)] rounded-full flex items-center justify-center transition-colors duration-300"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Carousel Container -->
+      <div class="relative">
+        <div class="carousel-container overflow-hidden">
+          <div
+            class="carousel-track flex gap-[100px] transition-transform duration-300 w-max"
+          >
+            <!-- Product Card 1 -->
+            <article
+              class="cursor-pointer w-[276px] h-[510px] transition-all duration-400 shrink-0"
+            >
+              <img
+                src="./assets/smart_watch.jpg"
+                alt="Продукт 1"
+                class="h-[317px] object-cover mb-[26px] hover:border-2 hover:border-accent transition-all duration-200 "
+              />
+              <p>
+                <h3 class="heading-nexa text-[22px] text-primary mb-[10px]">
+                  Smart Watch With Bracelet - Black
+                </h3>
+                <span class="text-[18px] font-inter-400 text-primary block  mb-[20px]"
+                  >25.00 лв</span
+                >
+                <button
+                  class="w-full bg-accent  text-white font-inter-500 text-[18px] py-[11px] rounded-[8px] hover:bg-review hover:text-accent_secondary transition-all duration-400"
+                >
+                  Купи Cега
+                </button>
+            </p>
+            </article>
+            <!-- Product Card 2 -->
+            <article
+              class="cursor-pointer w-[276px] h-[510px] transition-all duration-400 shrink-0"
+            >
+              <img
+                src="./assets/candles.jpg"
+                alt="Продукт 2"
+                class="h-[317px] object-cover mb-[26px] hover:border-2 hover:border-accent transition-all duration-200 "
+              />
+              <p>
+                <h3 class="heading-nexa text-[22px] text-primary mb-[10px]">Ароматна свещ Flower bouquet</h3>
+                <span class="text-[18px] font-inter-400 text-primary block  mb-[20px]"
+                  >25.00 лв</span
+                >
+                <button
+                  class="w-full bg-accent  text-white font-inter-500 text-[18px] py-[11px] rounded-[8px] hover:bg-review hover:text-accent_secondary transition-all duration-400"
+                >
+                  Купи Cега
+                </button>
+            </p>
+            </article>
+            <!-- Product Card 3 -->
+            <article
+              class="cursor-pointer w-[276px] h-[510px] transition-all duration-400 shrink-0"
+            >
+              <img
+                src="./assets/illustration.jpg"
+                alt="Продукт 3"
+                class="h-[317px] object-cover mb-[26px] hover:border-2 hover:border-accent transition-all duration-200 "
+              />
+              <p>
+                <h3 class="heading-nexa text-[22px] text-primary mb-[10px]">
+                  Илюстрация <br> Лястовица
+                </h3>
+                <span class="text-[18px] font-inter-400 text-primary block  mb-[20px]"
+                  >25.00 лв</span
+                >
+                <button
+                  class="w-full bg-accent  text-white font-inter-500 text-[18px] py-[11px] rounded-[8px] hover:bg-review hover:text-accent_secondary transition-all duration-400"
+                >
+                  Купи Cега
+                </button>
+            </p>
+            </article>
+            <!-- Product Card 4 -->
+            <article
+              class="cursor-pointer w-[276px] h-[510px] transition-all duration-400 shrink-0"
+            >
+              <img
+                src="./assets/book.png"
+                alt="Продукт 4"
+                class="h-[317px] object-cover mb-[26px] hover:border-2 hover:border-accent transition-all duration-200 "
+              />
+              <p>
+                <h3 class="heading-nexa text-[22px] text-primary mb-[10px]">
+                  Книга с илюстрации Малкият принц
+                </h3>
+                <span class="text-[18px] font-inter-400 text-primary block  mb-[20px]"
+                  >25.00 лв</span
+                >
+                <button
+                  class="w-full bg-accent  text-white font-inter-500 text-[18px] py-[11px] rounded-[8px] hover:bg-review hover:text-accent_secondary transition-all duration-400"
+                >
+                  Купи Cега
+                </button>
+            </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      
+    </script>
   </body>
 </html>
