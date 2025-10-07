@@ -24,6 +24,8 @@
               review: " #EFE1F0",
               text: "#5F6D7E",
               size_box: "#F3F3F3",
+              bg_violet: "#C3B2E7",
+              bg_blue: " rgba(0, 135, 251, 0.26)",
             },
             fontFamily: {
               inter: ["Inter", "system-ui", "sans-serif"],
@@ -61,11 +63,11 @@
       }
     </style>
   </head>
-  <body class="font-inter bg-secondary text-inter-400">
+  <body class="font-inter bg-secondary text-inter-400 overflow-x-hidden">
     <!-- Header -->
-    <header class="max-w-screen-1440 mx-auto bg-secondary sticky top-0 z-50">
-      <div class="container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center gap-x-[50px]">
+    <header class="w-full mx-auto bg-secondary sticky top-0 z-50">
+      <div class="max-w-screen-1440 container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center ">
           <!-- Logo -->
           <div class="flex items-center gap-x-[20px]">
             <img
@@ -242,10 +244,12 @@
         </div>
       </div>
       <!--Product Info-->
-      <div class="flex-1 md:w-1/2 max-w-[640px] mx-auto">
+      <div class="flex-1 md:w-1/2 max-w-[640px] mx-auto px-[20px] md:px-0">
         <!--General Info-->
         <article class="">
-          <div class="flex justify-between items-center">
+          <div
+            class="flex flex-col gap-4 md:flex-row justify-between items-center"
+          >
             <h2 class="heading-nexa text-[40px]">Обеци Гъбки</h2>
             <!--Ratings-->
             <div class="flex items-center gap-[12px]">
@@ -751,9 +755,9 @@
     </section>
 
     <!-- How We Differ Section -->
-    <section class="max-w-screen-1440 mx-auto my-[100px]">
+    <section class="max-w-screen-1440 mx-auto my-[100px] overflow-hidden">
       <h2
-        class="heading-nexa text-[40px] text-primary text-center mb-[102px] relative mx-auto w-[440px]"
+        class="heading-nexa text-[35px] md:text-[40px] text-primary text-center mb-[102px] relative mx-auto w-[440px] mt-2"
       >
         С какво се различава
         <img
@@ -762,7 +766,7 @@
           class="absolute top-[-10%] right-[-30%]"
         />
         <span
-          class="absolute bg-[#0087FB] flex items-center justify-center text-white text-[40pxpx] heading-nexa px-4 py-2 rounded-full rotate-[-2.85deg] transform top-[40px] left-[20%] h-[70px] w-[238px]"
+          class="absolute bg-[#0087FB] flex items-center justify-center text-white text-[40px] heading-nexa px-4 py-2 rounded-full rotate-[-2.85deg] transform top-[40px] left-[20%] h-[70px] w-[238px]"
         >
           Great.bg
         </span>
@@ -833,19 +837,217 @@
     </section>
 
     <!--Reviews Section-->
-    <section class="w-full bg-[#C3B2E7] mx-auto my-[100px]">
-      <div class="max-w-screen-1440 my-[100px] mx-auto">
-        <h2
-          class="heading-nexa text-[35px] text-primary text-left mb-[102px] relative w-[428px] leading-[55px]"
+    <section class="w-full bg-bg_violet mx-auto mt-[100px]">
+      <div class="py-[100px] mx-auto overflow-hidden">
+        <div
+          class="max-w-screen-1440 px-[20px] md:px-[30px] lg:mx-auto flex flex-col md:flex-row justify-between items-center mb-[10px] ml-[10px] md:ml-auto"
         >
-          Не взимай само нашето <br />
-          мнение под внимание
-          <img
-            src="./assets/arrow_reviews.png"
-            alt="arrow"
-            class="absolute top-[-20px] right-[-45%]"
-          />
-        </h2>
+          <h2
+            class="heading-nexa text-[35px] text-primary text-left mb-[50px] md:mb-[102px] relative w-[428px] leading-[55px]"
+          >
+            Не взимай само нашето <br />
+            мнение под внимание
+            <img
+              src="./assets/arrow_reviews.png"
+              alt="arrow"
+              class="absolute top-[-20px] right-[-45%]"
+            />
+          </h2>
+          <!-- Carousel Navigation -->
+          <div class="flex gap-4">
+            <button
+              class="carousel-prev bg-accent hover:bg-review text-white w-[45px] h-[45px] shadow-[0px_4.8px_4.8px_0px_rgba(12,4,102,0.2)] rounded-full flex items-center justify-center transition-colors duration-300"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              class="carousel-next bg-accent hover:bg-review text-white w-[45px] h-[45px] shadow-[0px_4.8px_4.8px_0px_rgba(12,4,102,0.2)] rounded-full flex items-center justify-center transition-colors duration-300"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Carousel Container -->
+        <div class="lg:max-w-screen-1440 lg:mx-auto relative">
+          <div class="carousel-container overflow-hidden">
+            <div
+              class="carousel-track flex gap-[40px] ml-[20px] md:ml-[30px] lg:ml-[30px] transition-transform duration-300 w-max"
+            >
+              <!-- Review Card 1 -->
+              <article
+                class="w-[400px] md:w-[500px] lg:w-[600px] p-[30px] md:p-[45px] lg:p-[65px] bg-white border-[1.2px] border-accent rounded-[24px] shadow-[0px 6px 16.8px 0px #080F340A]"
+              >
+                <div class="flex flex-col h-full">
+                  <h3 class="heading-nexa text-[22px] text-primary mb-[16px]">
+                    Страхотни бижута!
+                  </h3>
+                  <p
+                    class="text-accent_secondary text-[21px] font-inter-400 mb-[15px] md:mb-[33px]"
+                  >
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat aute irure
+                    sint amet occaecat cupidatat non proident
+                  </p>
+                  <div class="flex items-center mt-auto">
+                    <div
+                      class="w-[72px] h-[72px] rounded-full bg-bg_violet mr-4 overflow-hidden"
+                    >
+                      <img
+                        src="./assets/sofia.png"
+                        alt="Sofia Moore"
+                        class="w-[72px] h-[72px] object-contain scale-[190%] rounded-full object-[center_80%]"
+                      />
+                    </div>
+                    <div>
+                      <p
+                        class="font-inter-700 text-[22px] text-primary mb-[10px]"
+                      >
+                        Sophia Moore
+                      </p>
+                      <p
+                        class="text-accent_secondary text-[21px] font-inter-400"
+                      >
+                        CEO at Webflow Agency
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!-- Review Card 2 -->
+              <article
+                class="w-[400px] md:w-[500px] lg:w-[600px] p-[30px] md:p-[45px] lg:p-[65px] bg-white border-[1.2px] border-accent rounded-[24px] shadow-[0px 6px 16.8px 0px #080F340A]"
+              >
+                <div class="flex flex-col h-full">
+                  <h3 class="heading-nexa text-[22px] text-primary mb-[16px]">
+                    Перфектните подаръци!
+                  </h3>
+                  <p
+                    class="text-accent_secondary text-[21px] font-inter-400 mb-[15px] md:mb-[33px]"
+                  >
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat aute irure
+                    sint amet occaecat cupidatat non proident
+                  </p>
+                  <div class="flex items-center mt-auto">
+                    <div
+                      class="w-[72px] h-[72px] rounded-full bg-bg_violet mr-4 overflow-hidden"
+                    >
+                      <img
+                        src="./assets/adam.png"
+                        alt="Adam Smith"
+                        class="w-[72px] h-[72px] object-contain scale-[220%] rounded-full object-[center_90%]"
+                      />
+                    </div>
+                    <div>
+                      <p
+                        class="font-inter-700 text-[22px] text-primary mb-[10px]"
+                      >
+                        Adam Smith
+                      </p>
+                      <p
+                        class="text-accent_secondary text-[21px] font-inter-400"
+                      >
+                        Webflow Developer
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!-- Review Card 3 -->
+              <article
+                class="w-[400px] md:w-[500px] lg:w-[600px] p-[30px] md:p-[45px] lg:p-[65px] bg-white border-[1.2px] border-accent rounded-[24px] shadow-[0px 6px 16.8px 0px #080F340A]"
+              >
+                <div class="flex flex-col h-full">
+                  <h3 class="heading-nexa text-[22px] text-primary mb-[16px]">
+                    Супер качество на продуктите
+                  </h3>
+                  <p
+                    class="text-accent_secondary text-[21px] font-inter-400 mb-[15px] md:mb-[33px]"
+                  >
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat aute irure
+                    sint amet occaecat cupidatat non proident
+                  </p>
+                  <div class="flex items-center mt-auto">
+                    <div
+                      class="w-[72px] h-[72px] rounded-full bg-bg_violet mr-4 overflow-hidden"
+                    >
+                      <img
+                        src="./assets/mike.png"
+                        alt="Mike Warren"
+                        class="w-[72px] h-[72px] object-contain scale-[240%] rounded-full object-[center_100%] -translate-x-[50%]"
+                      />
+                    </div>
+                    <div>
+                      <p
+                        class="font-inter-700 text-[22px] text-primary mb-[10px]"
+                      >
+                        Mike Warren
+                      </p>
+                      <p
+                        class="text-accent_secondary text-[21px] font-inter-400"
+                      >
+                        Developer at BRIX Templates
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gift Section -->
+    <section class="w-full bg-bg_blue mx-auto py-[100px] md:pt-[297px] md:pb-[390px]">
+      <div class="text-center ">
+        <h2
+        class="heading-nexa text-[35px] md:text-[52px] text-primary text-center mb-[75px] md:mb-[125px] relative mx-auto w-[440px] md:w-[540px]"
+      >
+        Подаряването става
+        <span
+          class="absolute top-[50px] left-[15%] md:top-[70px] md:left-[8%] heading-nexa text-[35px] md:text-[52px] text-primary"
+          >толкова</span
+        >
+        <span
+          class="absolute bg-[#0087FB] flex items-center justify-center text-white text-[35px] md:text-[52px] heading-nexa px-8 py-4 rounded-full rotate-[-2.85deg] transform top-[35px] left-[50%] md:top-[55px] md:left-[52%]"
+        >
+          лесно
+        </span>
+        
+      </h2>
+        <p
+          class="text-[14px] md:text-[18px] text-[#5F6D7E] text-inter-400 md:max-w-[625px] mx-auto leading-relaxed px-[20px]"
+        >
+          Изпращайте перфектния подарък всеки път. Нашият магазин за подаръци е
+          пълен със стотици водещи марки и е внимателно подбран за всякакви
+          поводи.
+        </p>
       </div>
     </section>
   </body>
