@@ -26,6 +26,7 @@
               size_box: "#F3F3F3",
               bg_violet: "#C3B2E7",
               bg_blue: " rgba(0, 135, 251, 0.26)",
+              footer_heading: "#2E3646",
             },
             fontFamily: {
               inter: ["Inter", "system-ui", "sans-serif"],
@@ -81,7 +82,7 @@
   <body class="font-inter bg-secondary text-inter-400 overflow-x-hidden">
     <!-- Header -->
     <header class="w-full mx-auto bg-secondary sticky top-0 z-50">
-      <div class="max-w-screen-1440 container mx-auto px-4 py-4">
+      <div class="max-w-screen-1440 container mx-auto py-4">
         <div class="flex justify-between items-center">
           <!-- Logo -->
           <div class="flex items-center gap-x-[20px]">
@@ -203,10 +204,10 @@
     <!-- Product Section -->
     <section
       id="product"
-      class="max-w-screen-1440 flex flex-col items-stretch gap-[85px] mx-auto md:my-[100px] sm:my-[70px] custom-1300:flex-row custom-1300:items-stretch"
+      class="max-w-screen-1440 flex flex-col items-stretch gap-[85px] mx-auto md:my-[100px] custom-1300:flex-row custom-1300:items-stretch"
     >
       <!--Product photos-->
-      <div class="flex-1 max-w-[640px] mx-auto self-stretch">
+      <div class="flex-1 mx-auto self-stretch">
         <!-- Grid Container -->
         <div
           class="grid grid-cols-1 grid-rows-[minmax(0,1fr)_auto] gap-6 max-w-[640px] h-full"
@@ -620,7 +621,7 @@
     </section>
 
     <!-- Similar Products Section -->
-    <section class="max-w-screen-1440 mx-auto my-[100px] px-4">
+    <section class="max-w-screen-1440 mx-auto my-[100px]">
       <div class="flex justify-between items-center mb-[45px]">
         <h2 class="heading-nexa text-[35px] text-primary">Подобни продукти</h2>
         <!-- Carousel Navigation -->
@@ -855,7 +856,7 @@
     <section class="w-full bg-bg_violet mx-auto mt-[100px]">
       <div class="py-[100px] mx-auto overflow-hidden">
         <div
-          class="max-w-screen-1440 px-[20px] md:px-[30px] lg:mx-auto flex flex-col md:flex-row justify-between items-center mb-[10px] ml-[10px] md:ml-auto"
+          class="max-w-screen-1440  lg:mx-auto flex flex-col md:flex-row justify-between items-center mb-[10px] ml-[10px] md:ml-auto"
         >
           <h2
             class="heading-nexa text-[35px] text-primary text-left mb-[50px] md:mb-[102px] relative w-[428px] leading-[55px]"
@@ -910,7 +911,7 @@
         <div class="lg:max-w-screen-1440 lg:mx-auto relative">
           <div class="carousel-container overflow-hidden">
             <div
-              class="carousel-track flex gap-[40px] ml-[20px] md:ml-[30px] lg:ml-[30px] transition-transform duration-300 w-max"
+              class="carousel-track flex gap-[40px] transition-transform duration-300 w-max"
             >
               <!-- Review Card 1 -->
               <article
@@ -1106,5 +1107,286 @@
         class="floating-image opacity-0 xl-custom:opacity-100 z-index-10 w-[156px] h-[148px] absolute top-[309px] left-[23px]"
       />
     </section>
+
+    <!-- Unique Section -->
+    <section
+      class="w-full mx-auto pt-[270px] pb-[100px] xl-custom:pt-[297px] xl-custom:pb-[390px] relative overflow-hidden"
+    >
+      <div
+        class="text-center absolut z-index-15 flex flex-col items-center gap-[33px]"
+      >
+        <h2
+          class="heading-nexa text-[35px] lg:text-[52px] text-primary text-center relative mx-auto leading-[60px]"
+        >
+          <span
+            class="absolute top-[-180px] left-1/2 -translate-x-1/2 md:top-[-140px] lg:top-[-40px] lg:left-[0px] lg:-translate-x-0"
+          >
+            Открийте своя
+          </span>
+          <span
+            class="absolute bg-[#0087FB] flex items-center justify-center text-white px-4 py-1 lg:px-8 lg:py-4 rounded-full rotate-[-2.85deg] transform top-[-100px] left-1/2 -translate-x-1/2 md:top-[-40px] md:left-[120px] md:-translate-x-0 lg:top-[-50px] lg:left-[400px] lg:-translate-x-0"
+            >уникален</span
+          >
+          <span
+            class="absolute top-[-15px] left-1/2 -translate-x-1/2  md:top-[-40px] md:left-[350px] md:-translate-x-0 lg:top-[-40px] lg:left-[740px] lg:-translate-x-0"
+          >
+            подарък
+          </span>
+          <br />днес и станете част от нашата мисия
+        </h2>
+        <p
+          class="text-[14px] md:text-[18px] text-[#5F6D7E] text-inter-400 md:max-w-[625px] mx-auto leading-relaxed px-[20px]"
+        >
+          We’ve been told it is possible to revolutionize the payment industry.
+          We have not reinvented the wheel, we decided to build upon it -
+          successfully.
+        </p>
+        <button
+          type="submit"
+          class="bg-accent font-inter-600 text-[#F8F9FB] text-18px py-[8px] px-[18px] rounded-[8px] font-semibold hover:bg-review hover:text-gray-600 transition-colors duration-400 max-w-[239px]"
+        >
+          Разгледай продуктите
+        </button>
+      </div>
+      <img
+        src="./assets/envelop.png"
+        alt="envelop"
+        class="opacity-0 xl-custom:opacity-100 z-index-10 absolute top-[100px] left-[83px]"
+      />
+      <img
+        src="./assets/envelop_inside.png"
+        alt="envelop"
+        class="opacity-0 xl-custom:opacity-100 z-index-11 absolute top-[110px] left-[93px]"
+      />
+      <img
+        src="./assets/heart_1.png"
+        alt="heart"
+        class="opacity-0 xl-custom:opacity-100 z-index-10 absolute top-[108px] right-[108px]"
+      />
+      <img
+        src="./assets/candle.png"
+        alt="candle"
+        class="opacity-0 xl-custom:opacity-100 z-index-10 absolute top-[482px] right-[278px]"
+      />
+      <img
+        src="./assets/heart_2.png"
+        alt="heart"
+        class="opacity-0 xl-custom:opacity-100 z-index-10 absolute top-[512px] left-[352px] rotate-[-2.85deg]"
+      />
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-bg text-white">
+      <div class="max-w-screen-1440 mx-auto px-10 lg:px-[0px] relative">
+        <img src="./assets/heart_footer.png" alt="heart" class="absolute bottom-0 left-1/2 -translate-x-1/2 ">
+        <!-- 5 Columns Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+          <!-- Column 1: Brand & Social -->
+          <div class="lg:col-span-3 max-w-[320px]">
+            <!-- Logo -->
+            <div class="flex items-center gap-x-[20px] mb-[20px]">
+              <img
+                src="./assets/Logo.png"
+                alt="Logo Great.bg"
+                class="max-x-[34px]"
+              />
+              <a href="#home"
+                ><h3 class="heading-nexa text-[35px] text-footer_heading">
+                  Great.bg
+                </h3></a
+              >
+            </div>
+            <p
+              class="text-accent_secondary font-inter-400 text-[18px] leading-relaxed mb-[20px]"
+            >
+              Generate outside the box thinking with the possibility to target
+              the low.
+            </p>
+            <!-- Social Links -->
+            <div class="flex space-x-[10px]">
+              <a
+                href="#"
+                class="transition-all duration-300 ease-in-out hover:translate-y-[-2px] w-[36px] h-[36px] p-[9px]"
+              >
+                <img
+                  src="./assets/Social Media Icon Square/Facebook.png"
+                  alt="Facebook"
+                  class="m-0"
+                />
+              </a>
+              <a
+                href="#"
+                class="transition-all duration-300 ease-in-out hover:translate-y-[-2px] w-[36px] h-[36px] p-[9px]"
+              >
+                <img
+                  src="./assets/Social Media Icon Square/Instagram.png"
+                  alt="Instagram"
+                />
+              </a>
+              <a
+                href="#"
+                class="transition-all duration-300 ease-in-out hover:translate-y-[-2px] w-[36px] h-[36px] p-[9px]"
+              >
+                <img
+                  src="./assets/Social Media Icon Square/LinkedIn.png"
+                  alt="LinkedIn"
+                />
+              </a>
+              <a
+                href="#"
+                class="transition-all duration-300 ease-in-out hover:translate-y-[-2px] w-[36px] h-[36px] py-[11px] px-[8px]"
+              >
+                <img
+                  src="./assets/Social Media Icon Square/YouTube.png"
+                  alt="YouTube"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Column 2: Products -->
+          <div class="lg:col-span-2">
+            <h3 class=" heading-nexa text-[21px] text-footer_heading mb-[31px]">
+              Продукти
+            </h3>
+            <ul class="space-y-[20px]">
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Картички</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Чаши</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Картини</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Играчки</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Column 3: Additional Продукти -->
+          <div class="lg:col-span-2">
+            <h3 class=" heading-nexa text-[21px] text-footer_heading mb-[31px] invisible">Продукти</h3>
+            <ul class="space-y-[20px]">
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Бижута</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Текстили</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Декорации</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Други</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Column 4: Links -->
+          <div class="lg:col-span-2">
+                        <h3 class=" heading-nexa text-[21px] text-footer_heading mb-[31px]">
+Полезни линкове</h3>
+            <ul class="space-y-[20px]">
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Доставка</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Моят профил</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Срокове</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-inter-400 text-[18px] text-accent_secondary hover:text-accent transition duration-300"
+                  >Общи условия</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Column 5: Контакти -->
+          <div class="lg:col-span-3 max-w-[296px] custom-1300:translate-x-10">
+                        <h3 class=" heading-nexa text-[21px] text-footer_heading mb-[31px]">
+Контакти</h3>
+            <div class="space-y-3">
+              <div class="flex items-start gap-[15px]">
+                <img src="./assets/contact icons/address.png" alt="address" class="pt-[4px]">
+                <span class="text-inter-400 text-[18px] text-accent_secondary"
+                  >Poligona, bl.43, ent.1-Offices, Office 5Sofia 1750,
+                  Bulgaria</span
+                >
+              </div>
+              <div class="flex items-center gap-[15px]">
+                <img src="./assets/contact icons/phone.png" alt="phone">
+                <span class="text-inter-400 text-[18px] text-accent_secondary">+359 886 299 300</span>
+              </div>
+              <div class="flex items-center gap-[15px]">
+                <img src="./assets/contact icons/mail.png" alt="mail">
+                <span class="text-inter-400 text-[18px] text-accent_secondary">office@ada-soft.bg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Horizontal Line -->
+        <div
+          class="border-t border-[rgba(0,0,0,0.2)] mt-[70px] "
+        ></div>
+        <!-- Bottom Section -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center py-[25px]"
+        >
+          <div class="text-inter-400 text-[16px] text-accent_secondary">
+            © 2023 Great.co. All Rights Reserved.
+          </div>
+          <div class="text-inter-400 text-[16px] text-accent_secondary">
+            Made with love and code by <span class="font-semibold">Fundamental Studio</span> 
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
