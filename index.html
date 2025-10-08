@@ -36,6 +36,7 @@
             },
             screens: {
               "custom-1300": "1300px",
+              "xl-custom": "1713px",
             },
           },
         },
@@ -61,13 +62,27 @@
         letter-spacing: -0.1%;
         vertical-align: middle;
       }
+      /* Gift section images */
+      .floating-image {
+        position: absolute;
+        border-radius: 10px;
+        box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        transition: all 0.5s ease;
+        object-fit: cover;
+      }
+
+      .floating-image:hover {
+        transform: scale(1.05);
+        box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.4);
+        z-index: 10;
+      }
     </style>
   </head>
   <body class="font-inter bg-secondary text-inter-400 overflow-x-hidden">
     <!-- Header -->
     <header class="w-full mx-auto bg-secondary sticky top-0 z-50">
       <div class="max-w-screen-1440 container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center ">
+        <div class="flex justify-between items-center">
           <!-- Logo -->
           <div class="flex items-center gap-x-[20px]">
             <img
@@ -1024,23 +1039,24 @@
     </section>
 
     <!-- Gift Section -->
-    <section class="w-full bg-bg_blue mx-auto py-[100px] md:pt-[297px] md:pb-[390px]">
-      <div class="text-center ">
+    <section
+      class="w-full bg-bg_blue mx-auto py-[100px] xl-custom:pt-[297px] xl-custom:pb-[390px] relative overflow-hidden"
+    >
+      <div class="text-center absolut z-index-15">
         <h2
-        class="heading-nexa text-[35px] md:text-[52px] text-primary text-center mb-[75px] md:mb-[125px] relative mx-auto w-[440px] md:w-[540px]"
-      >
-        Подаряването става
-        <span
-          class="absolute top-[50px] left-[15%] md:top-[70px] md:left-[8%] heading-nexa text-[35px] md:text-[52px] text-primary"
-          >толкова</span
+          class="heading-nexa text-[35px] md:text-[52px] text-primary text-center mb-[75px] md:mb-[125px] relative mx-auto w-[440px] md:w-[540px]"
         >
-        <span
-          class="absolute bg-[#0087FB] flex items-center justify-center text-white text-[35px] md:text-[52px] heading-nexa px-8 py-4 rounded-full rotate-[-2.85deg] transform top-[35px] left-[50%] md:top-[55px] md:left-[52%]"
-        >
-          лесно
-        </span>
-        
-      </h2>
+          Подаряването става
+          <span
+            class="absolute top-[50px] left-[15%] md:top-[70px] md:left-[8%] heading-nexa text-[35px] md:text-[52px] text-primary"
+            >толкова</span
+          >
+          <span
+            class="absolute bg-[#0087FB] flex items-center justify-center text-white text-[35px] md:text-[52px] heading-nexa px-8 py-4 rounded-full rotate-[-2.85deg] transform top-[35px] left-[50%] md:top-[55px] md:left-[52%]"
+          >
+            лесно
+          </span>
+        </h2>
         <p
           class="text-[14px] md:text-[18px] text-[#5F6D7E] text-inter-400 md:max-w-[625px] mx-auto leading-relaxed px-[20px]"
         >
@@ -1049,6 +1065,46 @@
           поводи.
         </p>
       </div>
+      <img
+        src="./assets/bg_image_1.png"
+        alt="earings"
+        class="floating-image opacity-0 xl-custom:opacity-100 z-index-10 w-[239px] h-[226px] absolute top-[98px] left-[331px]"
+      />
+      <img
+        src="./assets/bg_image_2.png"
+        alt="cases"
+        class="floating-image opacity-0 xl-custom:opacity-100 z-index-10 w-[156px] h-[148px] absolute top-[63px] right-[611px]"
+      />
+      <img
+        src="./assets/bg_image_3.png"
+        alt="mozaic"
+        class="floating-image opacity-0 xl-custom:opacity-100 z-index-10 w-[239px] h-[226px] absolute top-[270px] right-[261px]"
+      />
+      <img
+        src="./assets/bg_image_4.png"
+        alt="bags"
+        class="floating-image opacity-0 xl-custom:opacity-100 z-index-10 w-[239px] h-[226px] absolute bottom-[64px] right-[48px]"
+      />
+      <img
+        src="./assets/bg_image_5.png"
+        alt="earings"
+        class="floating-image opacity-0 xl-custom:opacity-100 z-index-10 w-[156px] h-[148px] absolute bottom-[216px] right-[485px]"
+      />
+      <img
+        src="./assets/bg_image_6.png"
+        alt="pics"
+        class="floating-image opacity-0 xl-custom:opacity-100 z-index-10 w-[156px] h-[148px] absolute bottom-[103px] left-[830px]"
+      />
+      <img
+        src="./assets/bg_image_7.png"
+        alt="paintings"
+        class="floating-image opacity-0 xl-custom:opacity-100 z-index-10 w-[239px] h-[226px] absolute bottom-[86px] left-[199px]"
+      />
+      <img
+        src="./assets/bg_image_8.png"
+        alt="plates"
+        class="floating-image opacity-0 xl-custom:opacity-100 z-index-10 w-[156px] h-[148px] absolute top-[309px] left-[23px]"
+      />
     </section>
   </body>
 </html>
